@@ -1,0 +1,17 @@
+{
+  "name": "Data Inspector",
+  "description": "Walks up the DOM tree and identifies elements with data attributes",
+  "version": "0.1",
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["inspector.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["watch_right_clicks.js"],
+      "all_frames": true
+    }
+  ],
+  "manifest_version": 2
+}
